@@ -15,7 +15,7 @@
 
 
 ### How To Run
-Go to your directory where steps1.robot exist, then type:
+Go to your directory where test1.robot exists, then type:
   ```sh
-   robot steps1.robot
+   robot test1.robot
    ```
