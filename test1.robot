@@ -3,5 +3,9 @@ Library    SeleniumLibrary
 Resource    resources/steps.robot
 
 *** Test Cases ***
-DemoQA Input Text
-    Input text in field userName
+DemoQA Submit Form
+    User open Browser
+    User input data to Form
+    User click Submit Button
+    User validate Output Text
+    User close browser
