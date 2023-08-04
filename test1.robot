@@ -3,5 +3,5 @@ Library    SeleniumLibrary
 Resource    resources/steps.robot
 
 *** Test Cases ***
-DemoQA Input Text
-    Input text in field userName
+DemoQA Submit Form
+    User can Submit form in Demo QA Text Box

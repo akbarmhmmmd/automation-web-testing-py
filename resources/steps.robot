@@ -1,5 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
+Library    OperatingSystem
 Variables    variable.py
 
 # *** Variables ***
@@ -8,6 +9,14 @@ Variables    variable.py
 # ${text}    id=userName
 
 *** Keywords ***
-Input text in field userName
-    Open Browser    ${url_demoqa}    chrome
-    Input Text    ${text}    uno
+User can Submit form in Demo QA Text Box
+    Open Browser    ${url_demoqa}    ${browser}
+    Maximize Browser Window
+    Input Text    ${fullNameField}    ${fullName}
+    Input Text    ${emailField}    ${emailUser}
+    Input Text    ${addressField}    ${addressUser}
+    Input Text    ${permanentAddressField}    ${permanentAddressUser}
+    Scroll Element Into View    xpath: //*[contains(text(), "Submit")]
+    Click Element    ${submitButton}
+    Element Should Be Visible    ${outputText}
+    Close Browser
