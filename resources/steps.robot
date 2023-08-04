@@ -3,11 +3,6 @@ Library    SeleniumLibrary
 Library    OperatingSystem
 Variables    variable.py
 
-# *** Variables ***
-# ${url_google}    https://www.google.com/
-# ${url_demoqa}    https://demoqa.com/text-box
-# ${text}    id=userName
-
 *** Keywords ***
 User can Submit form in Demo QA Text Box
     Open Browser    ${url_demoqa}    ${browser}
@@ -16,7 +11,7 @@ User can Submit form in Demo QA Text Box
     Input Text    ${emailField}    ${emailUser}
     Input Text    ${addressField}    ${addressUser}
     Input Text    ${permanentAddressField}    ${permanentAddressUser}
-    Scroll Element Into View    xpath: //*[contains(text(), "Submit")]
+    Execute JavaScript    window.scrollTo(0, document.querySelector("${submitText}").getBoundingClientRect().top - window.innerHeight/2)
     Click Element    ${submitButton}
     Element Should Be Visible    ${outputText}
     Close Browser
