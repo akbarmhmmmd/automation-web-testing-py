@@ -1,6 +1,6 @@
 ## Description(s)
 
-- [ ] Please list about what you do in this PR
+- [ ] Please list about what you do in this Pull Request
 
 #### Example:
 
