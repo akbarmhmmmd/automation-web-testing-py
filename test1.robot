@@ -14,3 +14,4 @@ DemoQA click checkbox
     User open Demo QA Checkbox
     User click Home checkbox
     User validate Home checkbox checked
+    User close browser

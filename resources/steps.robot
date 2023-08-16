@@ -18,7 +18,7 @@ User input data to Form
     Input Text    ${addressField}    ${addressUser}
     Input Text    ${permanentAddressField}    ${permanentAddressUser}
 
-User click (Submit Button)
+User click Submit Button
     Execute JavaScript    window.scrollTo(0, document.querySelector("${submitText}").getBoundingClientRect().top - window.innerHeight/2)
     Click Element    ${submitButton}
 
